@@ -2,7 +2,7 @@
   <nav>
     <div class="logo">
       <a href="/">
-        <img src="/algonquin-pet-store.png" alt="Algonquin Pet Store Logo">
+        <img src="../assets/bestbuy.png" alt="BestBuy Logo" />
       </a>
     </div>
     <button class="hamburger" @click="toggleNav">
@@ -40,28 +40,43 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #3c673cd7;
-  color: #fff;
-  padding-top: 0.5rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-bottom: 0.25rem;
+  background-color: #001e73;
+  color: white;
+  padding: 0.5rem 1rem;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
+  height: 64px;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  font-family: 'Segoe UI', sans-serif;
 }
 
 nav img {
-  width: 60px;
+  width: 48px;
   height: auto;
 }
 
 .nav-links {
   display: flex;
   list-style: none;
-  font-size: 1.5rem;
-  font-weight: bold;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.nav-links li {
+  margin-left: 1.5rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+.nav-links a:hover {
+  color: #ffea00; /* BestBuy yellow */
 }
 
 .hamburger {
@@ -69,28 +84,22 @@ nav img {
   background: none;
   border: none;
   cursor: pointer;
-  padding: 0;
-  margin: 0;
-  margin-top: -40px;
 }
 
 .hamburger-icon {
-  display: block;
-  width: 20px;
+  width: 24px;
   height: 2px;
-  background-color: #fff;
+  background-color: white;
   position: relative;
-  top: 50%;
-  transform: translateY(-50%);
+  display: block;
 }
 
 .hamburger-icon::before,
 .hamburger-icon::after {
   content: '';
-  display: block;
-  width: 20px;
+  width: 24px;
   height: 2px;
-  background-color: #fff;
+  background-color: white;
   position: absolute;
   left: 0;
 }
@@ -100,22 +109,24 @@ nav img {
 }
 
 .hamburger-icon::after {
-  bottom: -6px;
+  top: 6px;
 }
 
 @media (max-width: 768px) {
   .nav-links {
     display: none;
     position: absolute;
-    top: 100%;
+    top: 64px;
     left: 0;
     right: 0;
-    background-color: #333;
+    background-color: #001e73;
     padding: 1rem;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .nav-links--open {
-    display: block;
+    display: flex;
   }
 
   .nav-links--open li {

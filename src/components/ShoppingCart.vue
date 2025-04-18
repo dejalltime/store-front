@@ -55,3 +55,79 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.shopping-cart {
+  background-color: #ffffff;
+  margin: 2rem auto;
+  padding: 2rem;
+  max-width: 900px;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.shopping-cart h3 {
+  text-align: center;
+  color: #444;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+.shopping-cart-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 2rem;
+}
+
+.shopping-cart-table th {
+  text-align: left;
+  background-color: #001e73;
+  color: white;
+  padding: 1rem;
+  font-size: 1rem;
+}
+
+.shopping-cart-table td {
+  padding: 1rem;
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 0.95rem;
+}
+
+.shopping-cart-table td:last-child {
+  text-align: right;
+}
+
+.shopping-cart-table td button {
+  background-color: transparent;
+  border: none;
+  color: #d32f2f;
+  cursor: pointer;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+
+.shopping-cart-table td button:hover {
+  color: #ff5252;
+}
+
+.checkout-button {
+  display: block;
+  margin-left: auto;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  background-color: #001e73;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.checkout-button:hover {
+  background-color: #ffea00;
+  color: #001e73;
+}
+
+</style>

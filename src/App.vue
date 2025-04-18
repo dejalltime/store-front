@@ -109,10 +109,10 @@ export default {
 
 <style>
 body {
-  background-image: url('@/assets/algonquin.jpg');
+  /* background-image: url('@/assets/algonquin.jpg'); */
   background-size: cover;
   background-position: center;
-  background-attachment: fixed; /* Keeps the background in place when scrolling */
+  background-attachment: fixed; 
   margin: 0;
   padding: 0;
 }
